@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/state_manager.dart';
+import 'package:snapitai/modules/home/widgets/active_analysis_widget.dart';
+import 'package:snapitai/modules/home/widgets/engine_status.dart';
 import 'package:snapitai/utils/app_colors.dart';
 
 class HomeScreen extends GetView {
@@ -95,6 +97,10 @@ class HomeScreen extends GetView {
                   ],
                 ),
               ),
+              SizedBox(height: 25,),
+              ActiveAnalysisWidget(),
+              SizedBox(height: 25,),
+              EngineStatus()
             ],
           ),
         ),
