@@ -19,6 +19,7 @@ class _ActiveAnalysisWidgetState extends State<ActiveAnalysisWidget> {
   Widget build(BuildContext context) {
     return AppCard(
       width: MediaQuery.of(context).size.width,
+      padding: 12,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [

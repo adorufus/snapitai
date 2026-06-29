@@ -8,6 +8,7 @@ class EngineStatus extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AppCard(
+      padding: 15,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

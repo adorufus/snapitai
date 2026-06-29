@@ -7,12 +7,15 @@ class AppChip extends StatelessWidget {
   final double? borderRadius;
   final double? width;
   final double? height;
+  final double? fontSize;
 
   final Color? backgroundColor;
   final Color? borderColor;
   final Color? foregroundColor;
 
   final Function()? onClick;
+
+  final bool isUsingPadding;
 
   const AppChip({
     super.key,
@@ -24,7 +27,9 @@ class AppChip extends StatelessWidget {
     this.borderColor,
     this.foregroundColor,
     this.chipText,
-    this.onClick
+    this.onClick,
+    this.fontSize,
+    this.isUsingPadding = true
   });
 
   @override
@@ -34,18 +39,21 @@ class AppChip extends StatelessWidget {
       child: Container(
         height: height,
         width: width,
-        padding: EdgeInsets.all(12),
+        padding: !isUsingPadding ? null : EdgeInsets.all(12),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(borderRadius ?? 15),
           color: backgroundColor ?? AppColors.secondary,
-          border: Border.all(color: borderColor ?? AppColors.lightPrimary)
+          border: Border.all(color: borderColor ?? AppColors.lightPrimary),
         ),
         child: Center(
           child:
               child ??
               Text(
                 chipText ?? "",
-                style: TextStyle(color: foregroundColor ?? Colors.white),
+                style: TextStyle(
+                  color: foregroundColor ?? Colors.white,
+                  fontSize: fontSize ?? 12,
+                ),
               ),
         ),
       ),
