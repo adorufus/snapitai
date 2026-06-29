@@ -116,7 +116,7 @@ class _ActiveAnalysisWidgetState extends State<ActiveAnalysisWidget> {
                     children: [
                       Icon(Icons.settings, color: AppColors.secondaryText),
                       SizedBox(width: 5,),
-                      Text("Intensity", style: TextStyle(color: AppColors.secondaryText),),
+                      Text("Intensity", style: TextStyle(color: AppColors.secondaryText, fontSize: 15),),
                     ],
                   ),
                 ),
@@ -132,7 +132,7 @@ class _ActiveAnalysisWidgetState extends State<ActiveAnalysisWidget> {
                     children: [
                       Icon(Icons.cut, color: AppColors.secondaryText),
                       SizedBox(width: 5,),
-                      Text("Extract Now", style: TextStyle(color: AppColors.secondaryText),),
+                      Text("Extract Now", style: TextStyle(color: AppColors.secondaryText, fontSize: 14),),
                     ],
                   ),
                 ),

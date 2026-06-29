@@ -83,13 +83,16 @@ class HomeScreen extends GetView {
                     ),
                     ElevatedButton(
                       onPressed: () {},
-                      style: ButtonStyle(
+                      style: ElevatedButton.styleFrom(
                         backgroundColor: WidgetStateColor.resolveWith(
                           (currentState) => AppColors.primary,
                         ),
                         foregroundColor: WidgetStateColor.resolveWith(
                           (currentState) => AppColors.neutral,
                         ),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadiusGeometry.circular(13)
+                        )
                       ),
                       child: Text("Analyze"),
                     ),
